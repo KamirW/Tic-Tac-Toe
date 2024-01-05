@@ -76,9 +76,38 @@ bool isGameOver() {
 
             if(win) return win; // All rows are filled
         }
+    }
 
-        // Check Diagonals
+    // Check Diagonals -> O(n)
+    if(grid[0][0] != 0) {
+        win = true;
+
+        for(int i = 1; i < GRID_SIZE; i++) {
+            if(grid[i][i] != grid[0][0]) {
+                win = false;
+                break;
+            }
+        }
+
+        if(win) return win;
+    }
+
+    if(grid[0][GRID_SIZE - 1] != 0) {
+        win = true;
+
+        for(int i = 1; i < GRID_SIZE; i++) {
+            if(grid[i][(GRID_SIZE - 1) - i] != grid[0][GRID_SIZE - 1]) {
+                win = false;
+                break;
+            }
+        }
+
+        if(win) return win;
 
     }
+
+    // If all cases fail
     return false;
+
+    // TODO: Draw a line through the winning party
 }

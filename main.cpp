@@ -12,16 +12,15 @@ int main() {
         updateGame();
 
         if(isGameOver()) {
-            // BeginDrawing();
+            BeginDrawing();
 
-            // ClearBackground(RAYWHITE);
-
-            // // Draw the grid -> O(n^2)
-            // drawGrid();
-
-            // EndDrawing();
-
+            // Draw the grid -> O(n^2)
+            drawGrid();
             DrawRectangle(0, GetScreenHeight() / GRID_SIZE, GetScreenWidth(), GetScreenHeight() / GRID_SIZE, BLACK);
+            DrawText("Game Over", 30, GetScreenHeight() / GRID_SIZE + 50, 100, RED);
+
+            EndDrawing();
+            
 
         } else {
             BeginDrawing();
