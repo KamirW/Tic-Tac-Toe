@@ -12,3 +12,5 @@ void drawGrid();
 void updateGame();
 
 bool isGameOver();
+
+void restart();

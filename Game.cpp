@@ -111,3 +111,8 @@ bool isGameOver() {
 
     // TODO: Draw a line through the winning party
 }
+
+void restart() {
+    grid[GRID_SIZE][GRID_SIZE] = { 0 };
+    currentPlayer = 1;
+}
